@@ -21,19 +21,17 @@ Plain static HTML + CSS. No build step, no dependencies. Fonts load from Google 
 | Colors | the `:root` variables at the top of `styles.css` |
 | Headshot | replace the `.portrait-frame` block in `index.html` with an `<img>` |
 
-### Adding a headshot
+### Replacing the headshot
 
-Drop an image (e.g. `rushton.jpg`) in the repo, then in `index.html` replace:
-
-```html
-<div class="portrait-frame"><span class="portrait-mono">RM</span></div>
-```
-
-with:
+The headshot lives at `rushton.jpg` and is referenced in the `#about` section of `index.html`:
 
 ```html
-<img class="portrait-frame" src="rushton.jpg" alt="Rushton McGarr" width="800" height="800" />
+<img class="portrait-frame" src="rushton.jpg" alt="Rushton McGarr" width="200" height="200" />
 ```
+
+To swap in a higher-resolution photo, replace `rushton.jpg` in the repo (keep the same
+filename, or update `src`). A square image of at least 800x800 renders crispest; the frame
+crops to a 4:5 portrait, anchored to the top.
 
 ## Hosting
 
