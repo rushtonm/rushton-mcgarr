@@ -4,20 +4,24 @@
 ------------------------------------------------------------------- */
 
 :root {
-  --navy: #14243f;
-  --navy-deep: #0d1a2f;
-  --slate: #3a4a63;
-  --slate-light: #64748b;
-  --accent: #9a7b4f;      /* muted brass — restrained, premium */
-  --ink: #1b2431;
-  --body: #40495a;
-  --line: #e4e7ec;
+  /* McCauley Street brand palette */
+  --sign-blue: #3a86c8;   /* primary: blade, accents, links */
+  --navy: #12304f;        /* Street Navy: text, reversed backgrounds */
+  --navy-deep: #0d2440;   /* darker navy for footer */
+  --gray: #8a97a6;        /* Bracket Gray: wire, dividers, de-emphasized meta */
+  --mist: #cfe3f5;        /* light tints, secondary text on navy */
+  --accent: #3a86c8;      /* Sign Blue */
+  --slate: #12304f;       /* body/secondary text -> Street Navy */
+  --slate-light: #8a97a6; /* Bracket Gray for small meta */
+  --ink: #12304f;         /* headings -> Street Navy */
+  --body: #12304f;        /* body copy -> Street Navy */
+  --line: #dbe4ee;        /* subtle divider (light navy tint) */
   --bg: #ffffff;
-  --bg-alt: #f6f7f9;
-  --bg-dark: #14243f;
+  --bg-alt: #f4f8fc;      /* faint Sign Blue tint */
+  --bg-dark: #12304f;     /* Street Navy */
   --max: 1120px;
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --sans: "Overpass", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Overpass", "Helvetica Neue", Arial, sans-serif; /* brand is single-family */
 }
 
 * { box-sizing: border-box; }
@@ -42,15 +46,15 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: var(--serif);
+  font-family: var(--sans);
   color: var(--ink);
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  letter-spacing: -0.005em;
   line-height: 1.15;
   margin: 0;
 }
 
-a { color: var(--navy); text-decoration: none; }
+a { color: var(--sign-blue); text-decoration: none; }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -65,7 +69,7 @@ a { color: var(--navy); text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 80px;
 }
 .brand { display: inline-flex; align-items: center; gap: 12px; }
 .brand-mark {
@@ -86,7 +90,7 @@ a { color: var(--navy); text-decoration: none; }
   color: var(--ink);
   font-weight: 500;
 }
-.brand-logo { height: 50px; width: auto; display: block; }
+.brand-logo { height: 48px; width: auto; display: block; }  /* compact blade ~203px wide, >= 200px minimum */
 .nav { display: flex; align-items: center; gap: 30px; }
 .nav a {
   font-size: 15px;
@@ -115,7 +119,7 @@ a { color: var(--navy); text-decoration: none; }
 }
 .btn:hover { transform: translateY(-1px); }
 .btn-primary { background: var(--accent); color: #fff; }
-.btn-primary:hover { background: #856a43; }
+.btn-primary:hover { background: #2f6ea8; }
 .btn-ghost { border: 1px solid var(--navy); color: var(--navy); }
 .btn-ghost:hover { background: var(--navy); color: #fff; }
 .btn-ghost.light { border-color: rgba(255,255,255,0.5); color: #fff; }
@@ -140,6 +144,7 @@ a { color: var(--navy); text-decoration: none; }
 }
 .hero h1 {
   font-size: clamp(34px, 5vw, 54px);
+  font-weight: 800;
   max-width: 16ch;
   margin-bottom: 26px;
 }
@@ -162,7 +167,7 @@ a { color: var(--navy); text-decoration: none; }
   color: var(--accent);
   margin: 0 0 16px;
 }
-.section-label.light { color: #c9b591; }
+.section-label.light { color: var(--mist); }
 .section-head { max-width: 720px; margin-bottom: 54px; }
 .section-head h2 { font-size: clamp(28px, 3.6vw, 40px); margin-bottom: 18px; }
 .section-intro { font-size: 18px; color: var(--slate); margin: 0; }
@@ -271,17 +276,17 @@ img.portrait-frame {
 .edu-note { color: var(--slate-light); font-size: 14.5px; margin: 0; }
 
 /* ---------- Contact (dark) ---------- */
-.section-dark { background: var(--bg-dark); color: #cdd5e0; }
+.section-dark { background: var(--bg-dark); color: var(--mist); }
 .contact-inner { max-width: 720px; text-align: center; margin: 0 auto; }
 .section-dark h2 { color: #fff; font-size: clamp(28px, 3.8vw, 42px); margin-bottom: 18px; }
-.contact-lede { font-size: 18px; color: #aeb9c9; margin: 0 auto 34px; max-width: 54ch; }
+.contact-lede { font-size: 18px; color: var(--mist); margin: 0 auto 34px; max-width: 54ch; }
 .contact-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
-.contact-fineprint { margin-top: 34px; font-size: 14px; color: #8996a9; letter-spacing: 0.02em; }
+.contact-fineprint { margin-top: 34px; font-size: 14px; color: var(--mist); letter-spacing: 0.02em; }
 
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--navy-deep);
-  color: #8996a9;
+  color: var(--mist);
   padding: 26px 0;
   font-size: 13.5px;
 }
@@ -292,7 +297,7 @@ img.portrait-frame {
   align-items: center;
   justify-content: space-between;
 }
-.footer-disclaimer { max-width: 62ch; color: #6b7789; }
+.footer-disclaimer { max-width: 62ch; color: var(--gray); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
@@ -309,5 +314,5 @@ img.portrait-frame {
 @media (max-width: 520px) {
   .hero-inner { padding: 64px 24px 72px; }
   .section { padding: 64px 0; }
-  .brand-logo { height: 38px; }
+  .brand-logo { height: 48px; }  /* keep blade >= 200px wide per minimum-size rule */
 }
