@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<title>McCauley Street</title>
+<rect width="64" height="64" rx="12" fill="#3A86C8"/>
+<rect x="4" y="4" width="56" height="56" rx="8" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+<g transform="translate(13 10) scale(0.42)"><g fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><line x1="45" y1="8" x2="45" y2="102"/><line x1="30" y1="102" x2="60" y2="102"/><path d="M45 20 H74 L84 30 L74 40 H45 Z"/><path d="M45 52 H16 L6 62 L16 72 H45 Z"/></g></g>
+</svg>
