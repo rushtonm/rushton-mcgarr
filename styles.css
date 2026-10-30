@@ -69,7 +69,7 @@ a { color: var(--sign-blue); text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 90px;
 }
 .brand { display: inline-flex; align-items: center; gap: 12px; }
 .brand-mark {
@@ -90,7 +90,7 @@ a { color: var(--sign-blue); text-decoration: none; }
   color: var(--ink);
   font-weight: 500;
 }
-.brand-logo { height: 48px; width: auto; display: block; }  /* compact blade ~203px wide, >= 200px minimum */
+.brand-logo { height: 60px; width: auto; display: block; }  /* full hanging sign; blade ~204px wide, >= 200px minimum */
 .nav { display: flex; align-items: center; gap: 30px; }
 .nav a {
   font-size: 15px;
@@ -314,5 +314,5 @@ img.portrait-frame {
 @media (max-width: 520px) {
   .hero-inner { padding: 64px 24px 72px; }
   .section { padding: 64px 0; }
-  .brand-logo { height: 48px; }  /* keep blade >= 200px wide per minimum-size rule */
+  .brand-logo { height: 60px; }  /* keep blade >= 200px wide per minimum-size rule */
 }
