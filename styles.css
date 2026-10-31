@@ -232,6 +232,7 @@ img.portrait-frame {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+.cards.cards-2 { grid-template-columns: repeat(2, 1fr); }  /* 2x2 for the four Approach cards */
 .card {
   background: #fff;
   border: 1px solid var(--line);
@@ -306,7 +307,7 @@ img.portrait-frame {
   .about-grid { grid-template-columns: 1fr; gap: 36px; }
   .portrait-frame { max-width: 260px; }
   .portrait-note { text-align: left; }
-  .cards { grid-template-columns: 1fr; }
+  .cards, .cards.cards-2 { grid-template-columns: 1fr; }
   .tl-item { grid-template-columns: 1fr; }
   .tl-meta { text-align: left; }
   .tl-desc { grid-column: 1; }
